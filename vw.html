@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sample Bootstrap 4 layout for demonstration purposes">
+    <meta name="keywords" content="Bootstrap 4, Responsive Design, Sample Layout">
+    <meta name="author" content="Furkan khan">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>VW</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+header{
+    display: unset
+}
+
+header .navbar{
+    padding: 0 16px;
+    position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  box-shadow: 3px 2px 6px rgb(44 44 44 / 11%);
+}
+
+        header nav a img{
+            width:60px; height:auto;
+        }
+
+        .navbar-collapse form{
+           position: relative;
+        }
+
+        header .navbar-collapse form input,
+        header .navbar-collapse form input:focus{
+            padding: 6px 20px 6px 6px !important;
+        }
+
+        .navbar-collapse form button{
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 3px;
+            padding: 0;
+            width: 20px;
+            height: 38px;
+        }
+
+        .navbar-collapse form button i{
+            color: rgb(41 92 167);
+        }
+
+        .navbar-light .navbar-toggler{
+            border: none;
+        }
+
+
+        .carousel-control-next, .carousel-control-prev{
+            width: 5%;
+        }
+
+        .carousel .carousel-inner .carousel-item{
+            width: 100% !important;
+            height: calc(100vh - 70px);
+            position: relative;
+        }
+
+        .carousel .carousel-inner .carousel-item h5{
+            font-size: 3.25rem;
+            letter-spacing: calc(-0.02em + 0.05rem);
+        }
+
+        .carousel .carousel-inner .carousel-item h5::first-line,
+        .hero-s .hero-content .hero-d h1::first-line,
+        .card-deck .card .card-body h5{
+         font-weight: 800;
+        }
+
+        .hero-s .hero-content .hero-d p,
+        .card-deck .card .card-body p,
+        .navbar-nav li a{
+            font-weight: 100;
+            font-size: 0.85rem;
+        }
+
+        .carousel .carousel-inner .carousel-item p{
+            font-weight: 100;
+            font-size: 1rem;
+        }
+
+        .carousel .carousel-inner .carousel-item img{
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .carousel .carousel-inner .carousel-item:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / 62%);
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .carousel-control-next, .carousel-control-prev{
+            background: transparent;
+            border: none;
+        }
+
+        .carousel-caption{
+            bottom: auto;
+            top: 20%;
+  width: 500px;
+        }
+
+        .card-s {
+    padding: 60px 0;
+    background-color: #fafafa;
+}
+
+.card-s .card-deck{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+        .card-deck .card img{
+            height: calc(500px - 100px);
+            object-fit: cover;
+        }
+
+        .card-deck .card .card-body a{
+            border-radius: 50px;
+    border: 1px solid #212529;
+    background: none;
+    padding: 10px;
+    font-size: 1rem;
+    color: #212529;
+    font-weight: 400;
+    border: 1px solid #212529;
+    border-radius: 0px;
+    line-height: 10px;
+        }
+
+        .hero-s .hero-content{
+            padding: 30px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: minmax(100px, auto);
+    position: relative;
+    margin: 30px 0 50px;
+        }
+
+        .hero-s .hero-content .hero-d{
+            background-color: rgb(0, 30, 80);
+            padding: 40px 100px 50px 50px;
+    transform: translate(40px, 40px);
+    letter-spacing: calc(-0.02em + 0.05rem);
+        }
+
+
+        .hero-s .hero-content .hero-d a{
+            line-height: 18px;
+    border-radius: 0;
+    border: 2px solid #fff;
+    background: none;
+    font-size: 1rem;
+        }
+
+
+        .hero-s .hero-content img{
+    position: relative;
+    width: 100%;
+}
+
+.hero-s .hero-content img::before{
+content: "";
+position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / 62%);
+            z-index: 1;
+            top: 0;
+            left: 0;
+
+        }
+
+        footer{
+            background-color: #ddd !important;
+        }
+
+        footer h5{
+            font-size: 1rem;
+    line-height: 120%;
+    font-weight: 800;
+    letter-spacing: calc(-0.02em + 0.05rem);
+        }
+
+        footer ul{
+            list-style-type: none;
+    margin: 0;
+    padding: 0;
+        }
+
+        footer ul li a,
+        footer form label{
+            font-size: 0.80rem;
+            color: #000;
+        }
+
+        footer form label{
+            font-weight: 600;
+        }
+
+        footer form input.form-control,
+        footer .form-control:focus,
+        .navbar-collapse form input,
+        .navbar-collapse form input:focus {
+            background-color: transparent;
+    border-bottom: 1px solid #000;
+    padding: 0 !important;
+    outline: 0;
+    box-shadow: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 0px;
+    font-size: 0.80rem;
+            color: #000;
+}
+
+
+footer form input.form-control::placeholder,
+footer .form-control:focus::placeholder,
+.navbar-collapse form input::placeholder {
+    font-size: 0.80rem;
+    color: #000;
+}
+
+footer .pages{
+  margin-bottom: 30px;
+}
+
+footer form .btn-outline-secondary {
+    border: 1px solid #000;
+    color: #000;
+    font-size: 0.85rem;
+    border-radius: 0px;
+    font-weight: 600;
+}
+
+        /* Media query */
+
+        @media screen and (max-width: 1025px){
+            .carousel .carousel-inner .carousel-item{
+        height: calc(100vh - 50%);
+    }
+
+    .hero-s .hero-content{
+        grid-template-columns: 50% 50%;
+    }
+
+    .hero-s .hero-content .hero-d{
+        padding: 30px;
+        transform: translate(0px, 0px);
+    }
+
+    .hero-s .hero-content img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+        @media screen and (max-width: 992px) {
+            .navbar-collapse form,
+            .navbar-collapse form input,
+            .navbar-collapse .navbar-nav{
+                width: 100% !important;
+            }
+
+            .navbar-collapse form button{
+                height: auto;
+                top: -5px;
+            }
+
+            .card-s .card-deck{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card-deck .card{
+                margin: 0 !important;
+            }
+
+            .navbar-collapse{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+           
+            .hero-s .hero-content .hero-d h1{
+                font-size: 2.10rem;
+            }
+
+    .carousel-caption{
+        top: 0;
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+
+    .carousel .carousel-inner .carousel-item h5{
+        font-size: 2.10rem;
+    }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .hero-s .hero-content {
+        grid-template-columns: 100%;
+    }
+
+    .hero-s .hero-content{
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .card-s{
+        padding: 50px 0;
+    }
+
+    .card-s .card-deck{
+        grid-template-columns: repeat(1, 1fr);
+    }
+        }
+     
+        
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+    <a class="navbar-brand" href="_blank">
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png" alt="VW-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Corporate <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Newsroom</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                US Media Site
+            </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Help Center</a>
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+        </form>
+    </div>
+    </nav>
+        </header>
+ <!-- Carousel -->
+        <section class="carousel-s">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1621971165665-cb27eca41a7e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-left d-block">
+                      <h5>Not just great value in transportation</h5>
+                      <p>From the Beetle and the Bus, through the Rabbit, Jetta and GTI, and to the Tiguan and Atlas, Volkswagen has always maintained its status as “the people’s car” — delivering not just great value in transportation, but also fun-to-drive cars with a unique style.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1616677001238-454f4c7d2ccd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-left d-block">
+                        <h5>What’s next?</h5>
+                        <p>Volkswagen may be “the people’s car,” but it’s the people that drive our cars who continue to shape our story. We can’t wait for our next chapter with you.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1583068672446-951334b81e82?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-left d-block">
+                      <h5>Timeline of Volkswagen in the United States</h5>
+                      <p>In 1949, Dutch businessman Ben Pon arrived in New York with two Volkswagen Type 1 vehicles. While Pon struggled initially to sell the cars, Americans soon warmed to the charms of the Beetle. </p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </button>
+              </div>
+        </section>
+
+         <!-- 3-up Card Grid -->
+        <section class="card-s">
+            <div class="container">
+               
+            <div class="card-deck">
+                
+                <div class="card">
+                  <img src="https://images.unsplash.com/photo-1527615731013-10fdd6d3c532?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">1949</h5>
+                    <p class="card-text">In 1949, Dutch businessman Ben Pon arrived in New York with two Volkswagen Type 1 vehicles. While Pon struggled initially to sell the cars, Americans soon warmed to the charms of the Beetle.</p>
+                    <a href="#" class="badge badge-secondary">Know More</a>
+                  </div>
+                </div>
+            
+         
+                <div class="card">
+                  <img src="https://images.unsplash.com/photo-1621971231299-d2b69f9b3fec?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">1950s</h5>
+                    <p class="card-text">Volkswagen of America was established in 1955 to organize dealers and provide parts and service. In 1959, the brand ran its first iconic “Think Small” ad touting the benefits of the air-cooled, easy-to-maintain Beetle.</p>
+                    <a href="#" class="badge badge-secondary">Know More</a> 
+                </div>
+                </div>
+           
+                <div class="card">
+                  <img src="https://images.unsplash.com/photo-1583714339805-902e3c7fc0ef?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyM3x8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">1960s</h5>
+                    <p class="card-text">The Beetle, Bus and more niche models like the Karmann Ghia were essential parts of ‘60s culture, from Woodstock to Hollywood. Volkswagen responded to demand by adding vehicles like the Dasher and Squareback to its model line.</p>
+                    <a href="#" class="badge badge-secondary">Know More</a>  
+                </div>
+                </div>
+            
+            </div>
+        </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-s">
+            <div class="container-fluid">
+                <div class="hero-content text-white text-left py-5">
+                <div class="hero-d">
+            <h1>We're writing this story together</h1>
+            <p>For 75 years, Americans have been falling in love with Volkswagen, from the first Beetle landing at the dock in New York to the all-new electric ID. Buzz pulling into driveways all over the country. We believe history is made by the people who lived it, and that it’s being made new every day. Meet some Americans who live their dreams—and build our future—behind the wheel of a VW. Let’s celebrate our anniversary together.</p>
+            <a href="#" class="btn btn-secondary">View more</a>
+        </div>
+            <img src="https://images.unsplash.com/photo-1650913543178-3eb334ec3b34?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="vw-model-heritage">
+        </div>
+            </div>
+        </section>
+         <!-- Footer -->
+         <footer class="py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="pages">
+                  <h5>About Volkswagen</h5>
+                  <ul>
+                    <li>
+                        <a href="#">Corporate</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Newsroom</a>
+                    </li>
+
+                    <li>
+                        <a href="#">US Media Site</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Help Center</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pages">
+                    <h5>Social Media</h5>
+                    <ul>
+                      <li>
+                          <a href="#">Facebook</a>
+                      </li>
+  
+                      <li>
+                          <a href="#">Instagram</a>
+                      </li>
+  
+                      <li>
+                          <a href="#">X</a>
+                      </li>
+  
+                      <li>
+                          <a href="#">LinkedIn</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h5>Contact Us</h5>
+                  <form id="dynamicForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name">
+                        <small class="feedback" id="nameFeedback"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email">
+                        <small class="feedback" id="emailFeedback"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Your Phone">
+                        <small class="feedback" id="phoneFeedback"></small>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    $("#dynamicForm").submit(function (event) {
+        event.preventDefault(); // Prevent form submission
+        let isValid = true;
+
+        // Name validation
+        const name = $("#name").val().trim();
+        if (name === "") {
+            isValid = false;
+            $("#nameFeedback").text("Name is required").css("color", "red");
+        } else {
+            $("#nameFeedback").text("");
+        }
+
+        // Email validation
+        const email = $("#email").val().trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            isValid = false;
+            $("#emailFeedback").text("Enter a valid email").css("color", "red");
+        } else {
+            $("#emailFeedback").text("");
+        }
+
+        // Phone validation
+        const phone = $("#phone").val().trim();
+        const phoneRegex = /^[0-9]{10}$/;
+        if (!phoneRegex.test(phone)) {
+            isValid = false;
+            $("#phoneFeedback").text("Enter a valid 10-digit phone number").css("color", "red");
+        } else {
+            $("#phoneFeedback").text("");
+        }
+
+        // Final submission feedback
+        if (isValid) {
+            alert("Form submitted successfully!");
+            $("#dynamicForm")[0].reset(); // Reset the form
+        }
+    });
+});
+
+    </script>
+    
+  </body>
+</html>
