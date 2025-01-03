@@ -13,7 +13,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <title>VW</title>
+    <!-- internal style -->
     <style>
+
+:root{
+    --black: rgb(0 0 0 / 62%);
+    --dark-black: rgb(0 0 0);
+    --light-black: rgb(33 37 41);
+    --blue: rgb(0 30 80);
+    --dark-blue: rgb(0, 30, 80);
+    --light-blue: rgb(41 92 167);
+    --box-shadow: rgb(44 44 44 / 11%);
+    --odd-white: rgb(250 250 250);
+    --white: rgb(255 255 255);
+    --light-white: rgb(221 221 221);
+
+}
 
         *{
             box-sizing: border-box;
@@ -28,7 +43,7 @@ header .navbar{
     position: sticky;
   position: -webkit-sticky;
   top: 0;
-  box-shadow: 3px 2px 6px rgb(44 44 44 / 11%);
+  box-shadow: 3px 2px 6px var(--box-shadow);
 }
 
         header nav a img{
@@ -47,7 +62,7 @@ header .navbar{
         .navbar-collapse form button{
             border: none;
             position: absolute;
-            top: 0;
+            top: -3px;
             right: 3px;
             padding: 0;
             width: 20px;
@@ -55,7 +70,7 @@ header .navbar{
         }
 
         .navbar-collapse form button i{
-            color: rgb(41 92 167);
+            color: var(--light-blue);
         }
 
         .navbar-light .navbar-toggler{
@@ -106,7 +121,7 @@ header .navbar{
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgb(0 0 0 / 62%);
+            background-color: var(--black);
             z-index: 1;
             top: 0;
             left: 0;
@@ -125,7 +140,7 @@ header .navbar{
 
         .card-s {
     padding: 60px 0;
-    background-color: #fafafa;
+    background-color: var(--odd-white);
 }
 
 .card-s .card-deck{
@@ -142,15 +157,23 @@ header .navbar{
 
         .card-deck .card .card-body a{
             border-radius: 50px;
-    border: 1px solid #212529;
+    border: 1px solid var(--light-black);
     background: none;
     padding: 10px;
     font-size: 1rem;
-    color: #212529;
+    color: var(--light-black);
     font-weight: 400;
-    border: 1px solid #212529;
+    border: 1px solid var(--light-black);
     border-radius: 0px;
     line-height: 10px;
+        }
+
+        .card-deck .card .card-body a:hover,
+        .card-deck .card .card-body a:focus,
+        .card-deck .card .card-body a:active{
+            background-color: var(--dark-black);
+            color: var(--white);
+            transition: all 0.4s ease-in-out;
         }
 
         .hero-s .hero-content{
@@ -164,7 +187,7 @@ header .navbar{
         }
 
         .hero-s .hero-content .hero-d{
-            background-color: rgb(0, 30, 80);
+            background-color: var(--dark-blue);
             padding: 40px 100px 50px 50px;
     transform: translate(40px, 40px);
     letter-spacing: calc(-0.02em + 0.05rem);
@@ -174,9 +197,17 @@ header .navbar{
         .hero-s .hero-content .hero-d a{
             line-height: 18px;
     border-radius: 0;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     background: none;
     font-size: 1rem;
+        }
+
+        .hero-s .hero-content .hero-d a:hover,
+        .hero-s .hero-content .hero-d a:active,
+        .hero-s .hero-content .hero-d a:focus{
+            color: var(--blue);
+            background-color: var(--white);
+            transition: all 0.2s ease-in-out;
         }
 
 
@@ -190,7 +221,7 @@ content: "";
 position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgb(0 0 0 / 62%);
+            background-color: var(--black);
             z-index: 1;
             top: 0;
             left: 0;
@@ -198,7 +229,7 @@ position: absolute;
         }
 
         footer{
-            background-color: #ddd !important;
+            background-color: var(--light-white) !important;
         }
 
         footer h5{
@@ -217,7 +248,7 @@ position: absolute;
         footer ul li a,
         footer form label{
             font-size: 0.80rem;
-            color: #000;
+            color: var(--dark-black);
         }
 
         footer form label{
@@ -229,7 +260,7 @@ position: absolute;
         .navbar-collapse form input,
         .navbar-collapse form input:focus {
             background-color: transparent;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--dark-black);
     padding: 0 !important;
     outline: 0;
     box-shadow: none;
@@ -238,7 +269,7 @@ position: absolute;
     border-right: none;
     border-radius: 0px;
     font-size: 0.80rem;
-            color: #000;
+            color: var(--dark-black);
 }
 
 
@@ -246,7 +277,7 @@ footer form input.form-control::placeholder,
 footer .form-control:focus::placeholder,
 .navbar-collapse form input::placeholder {
     font-size: 0.80rem;
-    color: #000;
+    color: var(--dark-black);
 }
 
 footer .pages{
@@ -254,8 +285,8 @@ footer .pages{
 }
 
 footer form .btn-outline-secondary {
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid var(--dark-black);
+    color: var(--dark-black);
     font-size: 0.85rem;
     border-radius: 0px;
     font-weight: 600;
@@ -292,7 +323,7 @@ footer form .btn-outline-secondary {
 
             .navbar-collapse form button{
                 height: auto;
-                top: -5px;
+                top: -3px;
             }
 
             .card-s .card-deck{
@@ -559,6 +590,9 @@ footer form .btn-outline-secondary {
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+
     <script>
         $(document).ready(function () {
     $("#dynamicForm").submit(function (event) {
